@@ -1,0 +1,423 @@
+@import "general";
+
+.breadcrumbs{
+  min-height: 148px;
+  background-color: $colorNewArrivals;
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      color: $colorSelection;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+
+    &__nav{
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      text-transform: uppercase;
+
+      &__a{
+        color: #636363;
+
+        &__active{
+          color: $colorSelection;
+          font-weight: 700;
+        }
+
+        &:hover{
+          color: darken($colorSelection, 20%);
+        }
+      }
+    }
+  }
+}
+
+.orderedGoods{
+  &__headers{
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 20px;
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+
+    &__details{
+      width: 40%;
+    }
+
+    &__price{
+      width: 15%;
+      text-align: center;
+    }
+
+    &__quantity{
+      width: 15%;
+      text-align: center;
+    }
+
+    &__shipping{
+      width: 10%;
+      text-align: center;
+    }
+
+    &__subtotal{
+      width: 10%;
+      text-align: center;
+    }
+
+    &__action{
+      width: 10%;
+      text-align: center;
+    }
+  }
+
+  &__item{
+    padding: 25px 0;
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+
+    &:nth-last-child(2){
+      margin-bottom: 44px;
+    }
+
+    &__details{
+      display: flex;
+      width: 40%;
+
+      img{
+        margin-right: 20px;
+      }
+
+      &__text{
+        padding: 13px 0 22px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h4{
+          font-size: 13px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        &__characteristics{
+
+          p{
+            font-size: 13px;
+            color: #575757;
+            font-weight: 500;
+            line-height: 20px;
+
+            span{
+              color: #6f6e6e;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+
+    &__price{
+      width: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p{
+        font-size: 13px;
+        font-weight: 600;
+        color: $colorOrderedTable;
+      }
+    }
+
+    &__quantity{
+      width: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      form{
+
+        input[type="number"]{
+          width: 54px;
+          height: 30px;
+          text-align: center;
+          border: 1px solid #eaeaea;
+          font-size: 13px;
+          font-weight: 400;
+          color: $colorOrderedTable;
+
+          &::placeholder {
+            font-size: 13px;
+            font-weight: 400;
+            text-align: center;
+            color: $colorOrderedTable;
+          }
+        }
+      }
+    }
+
+    &__shipping{
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p{
+        color: $colorOrderedTable;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    &__subtotal{
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p{
+        font-size: 13px;
+        font-weight: 600;
+        color: $colorOrderedTable;
+      }
+    }
+
+    &__action{
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 63px;
+
+    &__button{
+      padding: 20px 40px;
+      border: 1px solid #eaeaea;
+      color: #4a4a4a;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:hover{
+        background-color: #eaeaea;
+      }
+    }
+  }
+}
+
+.fa-times-circle{
+  color: #c0c0c0;
+  font-size: 16px;
+  font-weight: 400;
+
+  &:hover{
+    color: $mainColorHover;
+  }
+}
+
+.orderForms{
+  display: flex;
+  margin-bottom: 79px;
+
+  &__address{
+    width: 30%;
+    margin-right: 3%;
+
+    h3{
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    select{
+      min-height: 45px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      font-weight: 300;
+      border: 1px solid #eaeaea;
+      width: 100%;
+      padding-left: 18px;
+      padding-right: 12px;
+      box-sizing: border-box;
+
+      &:focus{
+          outline: none;
+      }
+    }
+
+    input[type="text"]{
+      min-height: 45px;
+      width: 100%;
+      border: 1px solid #eaeaea;
+      font-size: 13px;
+      font-weight: 300;
+      padding-left: 18px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+
+      &::placeholder{
+        color: #b1b1b1;
+      }
+    }
+
+    input[type="number"]{
+      min-height: 45px;
+      width: 100%;
+      border: 1px solid #eaeaea;
+      font-size: 13px;
+      font-weight: 300;
+      padding-left: 18px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+
+      &::placeholder{
+        color: #b1b1b1;
+      }
+    }
+
+    input[type="submit"]{
+      padding: 12px 15px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: #ffffff;
+      border: 1px solid #eaeaea;
+      cursor: pointer;
+
+      &:hover{
+        background-color: #eaeaea;
+      }
+    }
+  }
+
+  &__coupon{
+    width: 30%;
+    margin-right: 3%;
+
+    h3{
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    p{
+      color: #000000;
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 24px;
+    }
+
+    input[type="text"]{
+      min-height: 45px;
+      width: 100%;
+      border: 1px solid #eaeaea;
+      font-size: 13px;
+      font-weight: 400;
+      padding-left: 18px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+
+      &::placeholder{
+        color: #b1b1b1;
+      }
+    }
+
+    input[type="submit"]{
+      padding: 12px 15px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: #ffffff;
+      border: 1px solid #eaeaea;
+      cursor: pointer;
+
+      &:hover{
+        background-color: #eaeaea;
+      }
+    }
+  }
+
+  &__total{
+    background-color: #f5f3f3;
+    width: 30%;
+    max-height: 80%;
+    padding: 3%;
+    box-sizing: border-box;
+
+    &__subTotal{
+      color: #4a4a4a;
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 14px;
+
+      p:first-child{
+        margin-right: 16px;
+      }
+    }
+
+    &__grandTotal{
+
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 22px;
+      border-bottom: 1px solid #e2e2e2;
+      margin-bottom: 17px;
+
+      p:first-child{
+        margin-right: 16px;
+      }
+
+      p:last-child{
+        color: $colorSelection;
+      }
+    }
+
+    &__checkout{
+      padding: 19px 40px;
+      background-color: $colorSelection;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover{
+        background-color: darken($colorSelection, 20%);
+      }
+
+      &__a{
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
